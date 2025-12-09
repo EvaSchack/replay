@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="kontakt_os.css" />
+    <title>Kontakt os</title>
+  </head>
+  <body>
+    <div>
+      <h1>Har du spørgsmål? Vi er her for dig!</h1>
+      <h2>Send os en besked, og vi svarer hurtigt</h2>
+    </div>
+
+    <section id="form_section">
+      <article id="form">
+        <form>
+          <div class="form_group">
+            <label for="navn" class="undertitle_form">Navn</label>
+            <input
+              type="text"
+              id="navn"
+              name="navn"
+              aria-describedby="navn_error"
+              required
+            />
+            <p id="navn_error">Indsæt dit navn</p>
+          </div>
+
+          <div class="form_group">
+            <label for="e-mail" class="undertitle_form">E-mail</label>
+            <input
+              type="text"
+              id="e-mail"
+              name="e-mail"
+              aria-describedby="e-mail_error"
+              required
+            />
+            <p id="e-mail_error">Indsæt din mail</p>
+          </div>
+
+          <div class="form_group">
+            <label for="emne" class="undertitle_form">Emne</label>
+            <input
+              type="text"
+              id="emne"
+              name="emne"
+              aria-describedby="emne_error"
+              required
+            />
+            <p id="emne_error">Indsæt emne</p>
+          </div>
+
+          <div class="besked_group">
+            <label for="besked" class="undertitle_form">Besked</label>
+            <input
+              type="text"
+              id="besked"
+              name="besked"
+              aria-describedby="besked_error"
+              required
+            />
+          </div>
+        </form>
+        <button>Send besked</button>
+      </article>
+    </section>
+  </body>
+</html>

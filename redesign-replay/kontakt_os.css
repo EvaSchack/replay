@@ -1,0 +1,50 @@
+/* Layout for form */
+form {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+
+  .form_group {
+    display: grid;
+    gap: 0.1rem;
+    max-width: 10rem;
+  }
+
+  label:has(input) {
+    display: flex;
+    align-items: center;
+    gap: 0.25rlh;
+    justify-self: start;
+  }
+}
+
+input[type="text"] {
+  background-color: #dbe2f5;
+  border-radius: 6px;
+}
+
+/* Valideringsregler */
+#navn_error,
+#e-mail_error,
+#emne_error,
+#besked_error {
+  display: none;
+}
+
+.form_group:has(:required) {
+  label::after {
+    content: "*";
+    color: red;
+  }
+}
+
+.form_group:has(:user-invalid) {
+  input {
+    outline: 3px solid #f005;
+    border-color: darkred;
+  }
+  .error-message {
+    display: block;
+  }
+}
