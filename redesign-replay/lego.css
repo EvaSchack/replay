@@ -1,0 +1,23 @@
+body {
+  background-color: #f2f2ed;
+}
+
+h1 {
+  font-family: "Sour Gummy", sans-serif;
+  text-align: center;
+  color: #632e16;
+  margin: 60px;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: auto;
+  justify-items: center;
+}
+
+img {
+  width: 350px;
+  border-radius: 8px;
+}
