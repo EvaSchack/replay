@@ -84,6 +84,10 @@ label:has(input) {
   color: #632e16;
   font-weight: bold;
 }
+.knap_indsend:hover {
+  background-color: #e4b706;
+  border: none;
+}
 
 /* Valideringsregler i form */
 #navn_error,
