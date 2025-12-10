@@ -18,6 +18,8 @@ h1 {
 }
 
 img {
-  width: 350px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
   border-radius: 8px;
 }
