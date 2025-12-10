@@ -1,30 +1,91 @@
-/* Layout for form */
+/* Generelt */
+body {
+  background-color: #f2f2ed;
+}
+
+/* Overskrifterne */
+.overskrift_kontakt h1,
+.overskrift_kontakt h2 {
+  margin: 0;
+  font-family: "Sour Gummy", sans-serif;
+  color: #632e16;
+}
+
+.overskrift_kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Form */
 form {
   display: grid;
   gap: 1rem;
   padding: 1rem;
   border-radius: 15px;
-
-  .form_group {
-    display: grid;
-    gap: 0.1rem;
-    max-width: 10rem;
-  }
-
-  label:has(input) {
-    display: flex;
-    align-items: center;
-    gap: 0.25rlh;
-    justify-self: start;
-  }
 }
 
-input[type="text"] {
-  background-color: #dbe2f5;
-  border-radius: 6px;
+form .form_group {
+  display: grid;
+  gap: 1rem;
 }
 
-/* Valideringsregler */
+form input[type="text"] {
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 0.6rem;
+  width: 35rem;
+  height: 2rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+form textarea {
+  height: 10rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 0.6rem;
+  width: 35rem;
+  height: 10rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+label:has(input) {
+  display: flex;
+  align-items: center;
+  gap: 0.25rlh;
+  justify-self: start;
+}
+
+/* knap */
+.knap_indsend {
+  all: unset;
+  box-sizing: border-box;
+  text-align: center;
+
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  font-size: 18px;
+  background-color: #f0d465;
+  border: none;
+
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  color: #632e16;
+  font-weight: bold;
+}
+
+/* Valideringsregler i form */
 #navn_error,
 #e-mail_error,
 #emne_error,
@@ -47,4 +108,20 @@ input[type="text"] {
   .error-message {
     display: block;
   }
+}
+
+/* opstilling */
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 7rem;
+  margin: 50px;
+  margin-left: 7rem;
+}
+
+/* SVG */
+#Lag_1 {
+  width: 400px;
+  height: auto;
 }
