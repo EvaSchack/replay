@@ -8,6 +8,42 @@ h1 {
   color: #632e16;
 }
 
+h2 {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: Regular 400;
+  font-variation-settings: "wdth" 100;
+  font-size: 35px;
+  color: #c91417;
+  margin: 0 0 0.6rem 0;
+}
+
+p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: Regular 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #632e16;
+  margin: 0.2rem 0 1rem 0;
+  line-height: 1.6;
+}
+li {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: Regular 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #632e16;
+  margin: 0.2rem 0 1rem 0;
+  line-height: 1.6;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 /* .cta_btn {
   padding: 0.4rem 1rem;
   background-color: red;
@@ -50,41 +86,43 @@ summary::after {
   padding: 1rem 0;
 }
 
-.content {
+/* .content {
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 2.5rem;
-}
+} */
 .cards {
   display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1.6rem;
+  margin: 40px;
 }
-.card {
+/* .card {
   background: rgba(255, 255, 255, 0.8);
   padding: var(--card-pad);
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-}
-.card h2 {
-  color: var(--accent);
-  margin: 0 0 0.6rem 0;
-  font-size: 1.35rem;
-}
-.card p {
-  margin: 0.2rem 0 1rem 0;
-  line-height: 1.6;
-}
+} */
+
 details {
   margin-top: 0.4rem;
 }
 summary {
   cursor: pointer;
-  font-weight: 700;
-  color: var(--muted);
   display: inline-flex;
   gap: 0.6rem;
   align-items: center;
+
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: Regular 400;
+  font-style: normal;
+  font-size: 20px;
+  color: #aaa269;
+  margin: 0.2rem 0 1rem 0;
+  line-height: 1.6;
 }
+
 summary::-webkit-details-marker {
   display: none;
 }
@@ -101,25 +139,10 @@ details[open] .chev {
   align-items: center;
 }
 .svg-wrap {
-  background: var(--paper);
-  padding: 1.2rem;
-  border-radius: 24px;
   width: 100%;
-  display: flex;
   justify-content: center;
 }
-footer {
-  margin-top: 3rem;
-  padding: 2rem;
-  background: #eae7e0;
-  border-radius: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.col {
-  min-width: 180px;
-}
+
 @media (max-width: 980px) {
   .content {
     grid-template-columns: 1fr;
