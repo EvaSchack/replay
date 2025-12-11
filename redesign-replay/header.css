@@ -1,0 +1,27 @@
+header {
+  background-image: url("genbrugspapir.webp");
+  background-size: cover;
+  background-position: center; /* centrerer billedet */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 6.5rem;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
+.menu_header {
+  display: flex; /* gør menuen til en horisontal flexbox */
+  gap: 8rem;
+}
+
+.menu_header a {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  color: #632e16;
+  text-decoration: none;
+}
