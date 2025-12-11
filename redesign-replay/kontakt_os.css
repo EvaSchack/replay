@@ -25,6 +25,8 @@ form {
   gap: 1rem;
   padding: 1rem;
   border-radius: 15px;
+  width: 100%;
+  max-width: 35rem;
 }
 
 form .form_group {
@@ -74,7 +76,6 @@ label:has(input) {
   width: 150px;
   height: 40px;
   border-radius: 20px;
-  font-size: 18px;
   background-color: #f0d465;
   border: none;
 
@@ -128,4 +129,55 @@ label:has(input) {
 #Lag_1 {
   width: 400px;
   height: auto;
+}
+
+/* Mobil */
+@media (max-width: 800px) {
+  .overskrift_kontakt {
+    text-align: center;
+  }
+
+  .overskrift_kontakt h1 {
+    font-size: 21px;
+  }
+  .overskrift_kontakt h2 {
+    font-size: 15px;
+  }
+  .grid_1-1 {
+    grid-template-columns: 1fr;
+    margin: 0;
+    gap: 15px;
+  }
+
+  form input[type="text"],
+  form textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    justify-items: stretch;
+  }
+
+  form input[type="text"],
+  form textarea {
+    font-size: 15px;
+  }
+
+  .knap_indsend {
+    width: 100px;
+    font-size: 13px;
+  }
+
+  #Lag_1 {
+    display: grid;
+    width: 300px;
+    height: auto;
+    justify-self: center;
+    display: block;
+    margin-top: 10px;
+  }
 }
