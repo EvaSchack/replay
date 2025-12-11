@@ -23,3 +23,17 @@ img {
   height: auto;
   border-radius: 8px;
 }
+
+@media (max-width: 800px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
