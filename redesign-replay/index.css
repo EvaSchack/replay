@@ -240,13 +240,33 @@ footer {
 }
 
 .store-steps .step-card {
-  background: #f9f7ef;
+  background: #fffdf730;
 }
 
 /* Footer placeholder (index.html <footer> er tom) */
 footer {
   margin-top: 3rem;
   min-height: 180px;
+}
+
+/* Scroll-animationer til index.js */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Mobil tilpasninger */
