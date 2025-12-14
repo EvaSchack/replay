@@ -1,0 +1,274 @@
+/* Farver og generelle variabler til forsiden (bruges på tværs af sektioner i index.html) */
+:root {
+  --sand: #f6f3e8;
+  --sand-deep: #e8dfc6;
+  --paper: #d9c7af;
+  --brown: #6a3118;
+  --text: #4d3b2a;
+  --gold: #f2c94c;
+  --shadow: #d2ab34;
+  --card-shadow: rgba(0, 0, 0, 0.06);
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Grundopsætning for hele siden */
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, -apple-system, sans-serif;
+  background: var(--sand);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Centrering af indholdet i <main> */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Sour Gummy", "Nunito", sans-serif;
+  color: var(--brown);
+  margin: 0;
+}
+
+p {
+  margin: 0.5rem 0 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+/* Midlertidig header/footer baggrund der matcher reference (HTML er tom i index.html) */
+header,
+footer {
+  background: var(--paper);
+  min-height: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Hero sektionen i index.html (.hero + .hero-text/.hero-illustration/.hero-cta) */
+.hero {
+  padding: 3.5rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.6rem, 4vw + 1rem, 3.8rem);
+  letter-spacing: -0.02em;
+}
+
+.hero-text h2 {
+  font-size: clamp(1.5rem, 1.5vw + 1.1rem, 2rem);
+  font-weight: 700;
+}
+
+.hero-illustration img {
+  width: min(60vw, 360px);
+  margin: 0 auto;
+}
+
+.hero-cta {
+  margin-top: 0.5rem;
+}
+
+/* Knap "Se Udvalg" under hero */
+.btn-find {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.95rem 1.8rem;
+  background: var(--gold);
+  color: #5c2f11;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 8px 0 var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-find:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0 var(--shadow);
+}
+
+/* Første step-sektion i index.html (.intake-steps) */
+.intake-steps {
+  margin: 2.5rem auto 0;
+  text-align: center;
+}
+
+.intake-steps h2 {
+  font-size: clamp(1.6rem, 1.4vw + 1.1rem, 2.2rem);
+  font-weight: 800;
+  max-width: 950px;
+  margin: 0 auto 1.8rem;
+}
+
+/* Grid bruges i begge step-sektioner (intake + store) */
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.6rem;
+  align-items: start;
+}
+
+/* Kort til de enkelte steps (både intake-steps og store-steps) */
+.step-card {
+  background: #fffdf730;
+  border-radius: 20px;
+  padding: 1.4rem 1.2rem;
+  box-shadow: 0 10px 30px var(--card-shadow);
+  height: 100%;
+  display: grid;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.step-card img {
+  width: 120px;
+  margin: 0 auto;
+}
+
+.step-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.step-card p {
+  font-size: 0.98rem;
+  color: #5c4b3a;
+}
+
+/* Instagram sektionen i index.html (.instagram-feed) */
+.instagram-feed {
+  margin: 3rem auto;
+  background: var(--sand-deep);
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 10px 30px var(--card-shadow);
+}
+
+/* Toplinje i Instagram-sektionen (profil + CTA) */
+.instagram-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.4rem;
+}
+
+/* Profilinfo til venstre (ikon + handle) */
+.instagram-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.instagram-profile img {
+  width: 56px;
+}
+
+/* CTA-overskrift + knap til højre */
+.instagram-cta h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* Instagram-knap med ikon */
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  background: #fffef7;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  box-shadow: 0 6px 16px var(--card-shadow);
+}
+
+.btn-instagram img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Billedgalleri i Instagram-sektionen */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.instagram-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px var(--card-shadow);
+}
+
+/* Anden step-sektion i index.html (.store-steps) */
+.store-steps {
+  margin: 3rem auto 0;
+}
+
+.store-steps .step-grid {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.store-steps .step-card {
+  background: #f9f7ef;
+}
+
+/* Footer placeholder (index.html <footer> er tom) */
+footer {
+  margin-top: 3rem;
+  min-height: 180px;
+}
+
+/* Mobil tilpasninger */
+@media (max-width: 768px) {
+  main {
+    padding: 0 1.2rem 3rem;
+  }
+
+  .hero {
+    padding-top: 2.5rem;
+  }
+
+  .hero-illustration img {
+    width: min(80vw, 300px);
+  }
+
+  .instagram-header {
+    justify-content: flex-start;
+  }
+
+  .btn-instagram {
+    width: 100%;
+    justify-content: center;
+  }
+}
