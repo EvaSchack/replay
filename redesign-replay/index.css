@@ -1,8 +1,7 @@
 /* Farver og generelle variabler til forsiden (bruges på tværs af sektioner i index.html) */
 :root {
-  --sand: #f6f3e8;
-  --sand-deep: #e8dfc6;
-  --paper: #d9c7af;
+  --sand: #f2f2ed;
+  --sand-deep: #f2f2ed;
   --brown: #6a3118;
   --text: #4d3b2a;
   --gold: #f2c94c;
@@ -160,7 +159,7 @@ footer {
 /* Instagram sektionen i index.html (.instagram-feed) */
 .instagram-feed {
   margin: 3rem auto;
-  background: var(--sand-deep);
+  background: #e6e2cc;
   border-radius: 18px;
   padding: 1.8rem;
   box-shadow: 0 10px 30px var(--card-shadow);
