@@ -14,13 +14,17 @@
   </head>
   <body>
     <header>
-      <img class="logo" src="logo.webp" />
-      <div class="menu_header">
+      <a href="index.html"> <img class="logo" src="logo.webp" alt="Logo" /> </a>
+
+      <button class="burger" id="burger">☰</button>
+
+      <nav id="menu">
         <a href="kategorier.html">Kategorier</a>
         <a href="om_os.html">Om os</a>
         <a href="kontakt_os.html">Kontakt os</a>
-      </div>
+      </nav>
     </header>
+    <div id="overlay"></div>
 
     <div class="overskrift_kontakt">
       <h1>Har du spørgsmål? Vi er her for dig!</h1>
@@ -296,5 +300,6 @@
         </svg>
       </div>
     </section>
+    <script src="js/header.js"></script>
   </body>
 </html>
