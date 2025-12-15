@@ -4,18 +4,31 @@ body {
 }
 
 /* Overskrifterne */
-.overskrift_kontakt h1,
-.overskrift_kontakt h2 {
-  margin: 0;
+.overskrift_kontakt h1 {
   font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: SemiBold 600;
+  font-variation-settings: "wdth" 100;
+  font-size: 70px;
   color: #632e16;
+  margin-bottom: 0.5rem;
+}
+.overskrift_kontakt h2 {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: SemiBold 600;
+  font-variation-settings: "wdth" 100;
+  font-size: 35px;
+  color: #632e16;
+  margin-top: 0;
 }
 
 .overskrift_kontakt {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
   padding: 20px;
 }
 
