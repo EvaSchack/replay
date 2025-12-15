@@ -130,12 +130,6 @@ summary::after {
     transform: rotate(180deg);
   }
 
-  img {
-    width: 40vw;
-    max-width: 500px;
-    justify-self: center;
-  }
-
   .cards svg {
     width: 40vw;
     max-width: 500px;
@@ -182,6 +176,11 @@ summary::after {
       font-size: 1rem;
     }
   }
+}
+img {
+  width: 40vw;
+  max-width: 500px;
+  justify-self: center;
 }
 
 /* BALLON I BEVÆGELSE  */
