@@ -1,0 +1,142 @@
+:root {
+  --footer-bg: #efeae3;
+  --footer-text: #4a2b20;
+  --footer-accent: #60321a;
+  --max-width: 1200px;
+}
+
+/* Footer baggrund: sæt din tekstur-sti her */
+.site-footer {
+  background-image: url("genbrugspapir.webp");
+  background-repeat: repeat;
+  background-size: 30%;
+
+  padding: 48px 16px;
+  color: #4a2b20;
+
+  /* Runde hjørner kun øverst */
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+  /* Hvis baggrunden er synlig udenfor radius, tilføj: */
+  overflow: hidden;
+}
+
+/* centrer indhold */
+.site-footer .container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+/* brand/venstre kolonne */
+.footer-brand {
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.footer-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+.tagline {
+  margin: 0;
+  color: rgba(74, 43, 32, 0.85);
+}
+
+/* grid med kolonner til kontakt, find os, åbningstider, SoMe */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  flex: 1 1 auto;
+}
+
+/* kolonne-styling */
+.footer-col h4 {
+  margin: 0 0 8px 0;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: Regular 400;
+  font-variation-settings: "wdth" 100;
+  font-size: 20px;
+  color: #c91417;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col ul li {
+  margin: 8px 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: Regular 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #632e16;
+  line-height: 1.6;
+}
+.footer-col address {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: Regular 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #632e16;
+  line-height: 1.6;
+}
+
+/* links */
+.site-footer a {
+  color: rgba(74, 43, 32, 0.9);
+  text-decoration: underline;
+}
+.site-footer a:hover,
+.site-footer a:focus {
+  color: var(--footer-accent);
+  outline: none;
+  text-decoration: none;
+}
+
+/* socia l-liste små justeringer */
+.social li {
+  padding: 2px 0;
+}
+
+@media (max-width: 900px) {
+  .site-footer .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-logo {
+    width: 300px;
+    height: auto;
+  }
+  .img {
+    width: 300px;
+    height: auto;
+  }
+
+  .footer-col h4 {
+    text-align: left;
+  }
+}
