@@ -1,0 +1,193 @@
+/* Generelt */
+body {
+  background-color: #f2f2ed;
+}
+
+/* Overskrifterne */
+.overskrift_kontakt h1 {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: SemiBold 600;
+  font-variation-settings: "wdth" 100;
+  font-size: 70px;
+  color: #632e16;
+  margin-bottom: 0.5rem;
+}
+.overskrift_kontakt h2 {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: SemiBold 600;
+  font-variation-settings: "wdth" 100;
+  font-size: 35px;
+  color: #632e16;
+  margin-top: 0;
+}
+
+.overskrift_kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Form layout */
+form {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 35rem;
+}
+
+form .form_group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+label:has(input) {
+  display: flex;
+  align-items: center;
+  gap: 0.25rlh;
+  justify-self: start;
+}
+
+/* Inputs */
+input[type="text"],
+textarea {
+  border: 1px solid #ccc;
+  padding: 0.25rlh;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px #0001;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+textarea {
+  height: 10rem;
+}
+
+/* Buttons */
+.knap_indsend {
+  border: none;
+  background-color: #f0d465;
+  color: #632e16;
+  border-radius: 6px;
+  width: 10rem;
+  height: 2rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+
+.knap_indsend:hover,
+button:hover {
+  background: #e4b706;
+}
+
+button:active {
+  scale: 0.98;
+}
+
+/* Pseudo-classes */
+:focus-visible {
+  outline: 2px solid slateblue;
+  outline-offset: 1px;
+}
+
+/* Valideringsregler */
+.error-message {
+  display: none;
+  color: darkred;
+}
+#navn_error,
+#e-mail_error,
+#emne_error,
+#besked_error {
+  display: none;
+}
+
+.form_group:has(:required) label::after {
+  content: " *";
+  color: red;
+}
+
+/* Tilføj rød kant omkring input-feltet, hvis det er ugyldigt */
+.form_group:has(:user-invalid) input,
+.form_group:has(:user-invalid) textarea {
+  outline: 3px solid #f005;
+  border-color: darkred;
+}
+
+/* Vis fejlmeddelelsen, hvis feltet er ugyldigt */
+.form_group:has(:user-invalid) .error-message {
+  display: block;
+}
+
+/* Grid layout for side */
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 7rem;
+  margin: 50px;
+  margin-left: 7rem;
+}
+
+/* SVG */
+#Lag_1 {
+  width: 400px;
+  height: auto;
+}
+
+/* Mobil */
+@media (max-width: 800px) {
+  .overskrift_kontakt {
+    text-align: center;
+  }
+
+  .overskrift_kontakt h1 {
+    font-size: 30px;
+  }
+  .overskrift_kontakt h2 {
+    font-size: 20px;
+  }
+  .grid_1-1 {
+    grid-template-columns: 1fr;
+    margin: 0;
+    gap: 15px;
+  }
+
+  form input[type="text"],
+  form textarea {
+    width: 30rem;
+    max-width: 30rem;
+    font-size: 15px;
+    align-items: center;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    justify-items: stretch;
+  }
+
+  .knap_indsend {
+    width: 100px;
+    font-size: 13px;
+  }
+
+  #Lag_1 {
+    width: 300px;
+    height: auto;
+    justify-self: center;
+    display: block;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,110 @@
+/* Header */
+header {
+  background-image: url("genbrugspapir.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Logo */
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+/* Menu desk-top */
+#menu {
+  display: flex;
+  gap: 8rem;
+}
+
+#menu a {
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  color: #632e16;
+  text-decoration: none;
+}
+
+/* Burger-knap - skjulte på desktop */
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobil */
+@media (max-width: 800px) {
+  .burger {
+    display: block;
+    z-index: 1100;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0px;
+    width: 250px;
+    height: auto;
+    background-color: #f8f4e3;
+    padding: 2rem;
+    gap: 1.5rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+
+    /* START udenfor skærmen */
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  #menu.show {
+    transform: translateX(0);
+  }
+
+  #menu a {
+    font-size: 20px;
+    color: #632e16;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  #menu a:hover {
+    color: #a94e1a;
+    transform: translateX(10px);
+  }
+
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #632e16;
+  }
+
+  /* Når burger trykkes */
+  #menu.show {
+    right: 0;
+  }
+
+  /* Overlay */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 900;
+  }
+
+  #overlay.show {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
